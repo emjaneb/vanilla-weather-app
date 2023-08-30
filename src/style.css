@@ -1,10 +1,9 @@
 .weather-app {
-  max-width: 600px;
+  max-width: 700px;
   margin: 40px auto;
   padding: 20px;
-  border: 1px solid #80deea;
+  border: 2px solid #dee2e6;
   border-radius: 20px;
-  background-color: #81d4fa;
   text-align: center;
 }
 
@@ -17,10 +16,14 @@
   margin: 15px;
 }
 
-.current-overview {
+.description {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 15px 0px;
 }
 
-.forecast {
+.forecast-icon {
+  width: 70px;
 }
 
 .credit {
@@ -32,4 +35,14 @@ li {
 }
 ul {
   padding-left: 0;
+}
+
+#current-icon {
+  width: 150px;
+  margin-right: 20px;
+}
+
+#celsius-link,
+#fahrenheit-link {
+  text-decoration: none;
 }
