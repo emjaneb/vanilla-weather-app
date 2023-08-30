@@ -1,0 +1,35 @@
+.weather-app {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #80deea;
+  border-radius: 20px;
+  background-color: #81d4fa;
+  text-align: center;
+}
+
+.search-form {
+  padding: 10px;
+}
+
+.current-weather-info {
+  padding: 10px;
+  margin: 15px;
+}
+
+.current-overview {
+}
+
+.forecast {
+}
+
+.credit {
+  margin-top: 20px;
+}
+
+li {
+  list-style: none;
+}
+ul {
+  padding-left: 0;
+}
