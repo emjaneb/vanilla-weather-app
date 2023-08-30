@@ -5,19 +5,24 @@ ul {
   padding-left: 0;
 }
 
+body {
+  background-color: #b2ebf2;
+}
+
 .weather-app-wrapper {
   max-width: 700px;
-  margin: 40px auto;
+  margin: 80px auto;
 }
 
 .weather-app {
   max-width: 700px;
-  margin: 40px auto;
+  margin: 0px auto;
   padding: 20px;
-  border: 2px solid #dee2e6;
+  border: 1px solid #ecedef;
   border-radius: 20px;
   text-align: center;
   font-family: "Roboto", sans-serif;
+  background-color: #ffffff;
 }
 
 .search-form {
@@ -30,9 +35,8 @@ ul {
 }
 
 .day-time {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
-  font-style: italic;
 }
 
 .current-temp {
