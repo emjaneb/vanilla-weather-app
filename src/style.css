@@ -1,3 +1,15 @@
+li {
+  list-style: none;
+}
+ul {
+  padding-left: 0;
+}
+
+.weather-app-wrapper {
+  max-width: 700px;
+  margin: 40px auto;
+}
+
 .weather-app {
   max-width: 700px;
   margin: 40px auto;
@@ -5,36 +17,69 @@
   border: 2px solid #dee2e6;
   border-radius: 20px;
   text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
 .search-form {
   padding: 10px;
 }
 
+.city-name {
+  font-size: 40px;
+  font-family: "REM", sans-serif;
+}
+
+.day-time {
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.current-temp {
+  font-size: 50px;
+  font-weight: 600;
+  position: relative;
+  top: 15px;
+}
+
+.units {
+  font-size: 17px;
+  position: relative;
+  bottom: 5px;
+}
+
 .current-weather-info {
+  font-size: 15px;
   padding: 10px;
   margin: 15px;
 }
 
 .description {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   margin: 15px 0px;
 }
 
+.details-heading {
+  font-weight: 600;
+}
+
 .forecast-icon {
-  width: 70px;
+  width: 65px;
+}
+
+.forecast-day,
+.forecast-divider {
+  font-weight: 500;
+}
+
+.forecast-max {
+  font-weight: 500;
 }
 
 .credit {
   margin-top: 20px;
-}
-
-li {
-  list-style: none;
-}
-ul {
-  padding-left: 0;
+  text-align: center;
 }
 
 #current-icon {
