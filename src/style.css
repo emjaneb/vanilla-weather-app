@@ -21,7 +21,7 @@ body {
   border: 1px solid #ecedef;
   border-radius: 20px;
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Assistant", sans-serif;
   background-color: #ffffff;
 }
 
@@ -36,7 +36,7 @@ body {
 
 .day-time {
   font-size: 17px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .current-temp {
@@ -48,6 +48,7 @@ body {
 
 .units {
   font-size: 17px;
+  font-weight: 600;
   position: relative;
   bottom: 5px;
 }
@@ -60,7 +61,7 @@ body {
 
 .description {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
   margin: 15px 0px;
 }
 
@@ -74,11 +75,11 @@ body {
 
 .forecast-day,
 .forecast-divider {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .forecast-max {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .credit {
