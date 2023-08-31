@@ -60,9 +60,14 @@ body {
 }
 
 .description {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   margin: 15px 0px;
+  text-transform: capitalize;
+}
+
+.current-forecast-details {
+  font-size: 17px;
 }
 
 .details-heading {
@@ -76,6 +81,11 @@ body {
 .forecast-day,
 .forecast-divider {
   font-weight: 600;
+}
+
+.forecast-day,
+.forecast-temp {
+  font-size: 17px;
 }
 
 .forecast-max {

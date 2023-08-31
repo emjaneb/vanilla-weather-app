@@ -15,6 +15,8 @@
         href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=REM:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+
 
     <link rel="stylesheet" href="src/style.css">
 
@@ -42,14 +44,14 @@
 
                 <div class="current-weather-info">
                     <div class="current-overview">
-                        <h1 class="city-name">Melbourne</h1>
-                        <div class="day-time">Wednesday 10:04</div>
+                        <h1 class="city-name" id="city">Melbourne</h1>
+                        <div class="day-time" id="day-time">Wednesday 10:04</div>
                     </div>
 
                     <div class="row">
                         <div class="col-6">
                             <img src="images/cloudy.png" alt="cloudy-icon" id="current-icon">
-                            <span class="current-temp">13</span>
+                            <span class="current-temp" id="current-temp">13</span>
                             <span class="units">
                                 <a href="#" id="celsius-link" class="active">ºC</a>
                                 <span class="divider">|</span>
@@ -58,13 +60,15 @@
                         </div>
 
 
-                        <div class="col-6" id="current-forecast-details">
-                            <div class="description">Cloudy</div>
-                            <ul>
-                                <li><span class="details-heading">Precipitation:</span> 39%</li>
-                                <li><span class="details-heading">Humidity:</span> 91%</li>
-                                <li><span class="details-heading">Wind:</span> 16 km/h</li>
-                            </ul>
+                        <div class="col-6">
+                            <div class="description" id="description">Cloudy</div>
+                            <div class="current-forecast-details">
+                                <ul>
+                                    <!-- <li><span class="details-heading">Precipitation:</span> %</li> -->
+                                    <li><span class="details-heading">Humidity: </span><span id="humidity"></span>%</li>
+                                    <li><span class="details-heading">Wind: </span><span id="wind"></span> km/h</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
