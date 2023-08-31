@@ -34,16 +34,9 @@ body {
   font-family: "REM", sans-serif;
 }
 
-.day-time {
+.date-time {
   font-size: 17px;
   font-weight: 500;
-}
-
-.current-temp {
-  font-size: 50px;
-  font-weight: 600;
-  position: relative;
-  top: 15px;
 }
 
 .units {
@@ -100,6 +93,13 @@ body {
 #current-icon {
   width: 150px;
   margin-right: 20px;
+}
+
+#current-temp {
+  font-size: 50px;
+  font-weight: 600;
+  position: relative;
+  top: 15px;
 }
 
 #celsius-link,
