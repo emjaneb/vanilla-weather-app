@@ -43,10 +43,22 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.condition.description);
 }
 
-let apiKey = "a6946fa02tb383o83fefbda1f7e7863a";
-let query = "Melbourne";
-let units = "metric";
-let currentApiUrl = `https://api.shecodes.io/weather/v1/current?query=${query}&key=${apiKey}&units=${units}`;
-let forecastApiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${query}&key=${apiKey}&units=${units}`;
+function search(city) {
+  let apiKey = "a6946fa02tb383o83fefbda1f7e7863a";
+  let units = "metric";
+  let currentApiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
+  axios.get(currentApiUrl).then(displayTemperature);
+}
 
-axios.get(currentApiUrl).then(displayTemperature);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("Melbourne");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+// let forecastApiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${query}&key=${apiKey}&units=${units}`;

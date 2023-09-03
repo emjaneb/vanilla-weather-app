@@ -25,17 +25,13 @@ body {
   background-color: #ffffff;
 }
 
-.search-form {
-  padding: 10px;
-}
-
 .city-name {
   font-size: 40px;
   font-family: "REM", sans-serif;
 }
 
-.date-time {
-  font-size: 17px;
+.date-time-update {
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -88,6 +84,10 @@ body {
 .credit {
   margin-top: 20px;
   text-align: center;
+}
+
+#search-form {
+  padding: 10px;
 }
 
 #current-icon {
