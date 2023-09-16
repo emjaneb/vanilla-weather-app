@@ -72,7 +72,7 @@ body {
   font-weight: 600;
 }
 
-.forecast-icon {
+/* .forecast-icon {
   width: 65px;
 }
 
@@ -88,11 +88,13 @@ body {
 
 .forecast-max {
   font-weight: 600;
-}
+} */
 
 .credit {
   margin-top: 20px;
   text-align: center;
+  font-family: "Assistant", sans-serif;
+  font-size: 16px;
 }
 
 #search-form {
