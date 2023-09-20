@@ -95,6 +95,11 @@ body {
   font-weight: 600;
 }
 
+.forecast-min {
+  color: #64696d;
+  font-weight: 400;
+}
+
 .credit {
   margin-top: 20px;
   text-align: center;

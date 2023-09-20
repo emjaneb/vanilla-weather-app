@@ -21,28 +21,48 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday"];
 
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-2">
-     <div class="forecast-day">${day}</div>
-     <img src="images/partly-sunny-showers.png" alt="partly-sunny-showers" class="forecast-icon">
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-2">
+     <div class="forecast-day">${formatDay(forecastDay.time)}</div>
+     <img src=${forecastDay.condition.icon_url} alt=${
+          forecastDay.condition.icon
+        } class="forecast-icon">
      <div class="forecast-temp">
-     <span class="forecast-max">14°</span>
-     <span class="forecast-divider">|</span>
-     <span class="forecast-min">8°</span>
+     <span class="forecast-max">${Math.round(
+       forecastDay.temperature.maximum
+     )}°</span>
+     <span class="forecast-min">${Math.round(
+       forecastDay.temperature.minimum
+     )}°</span>
      </div>
      </div>`;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
 
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coords) {
+  let apiKey = "a6946fa02tb383o83fefbda1f7e7863a";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coords.longitude}&lat=${coords.latitude}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayTemperature(response) {
@@ -67,6 +87,8 @@ function displayTemperature(response) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
   iconElement.setAttribute("alt", response.data.condition.description);
+
+  getForecast(response.data.coordinates);
 }
 
 function search(city) {
@@ -111,4 +133,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 search("Melbourne");
-displayForecast();
