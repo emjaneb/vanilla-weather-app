@@ -35,13 +35,9 @@ body {
   font-weight: 500;
 }
 
-.weather-temp .active {
+.weather-temp {
   color: #212529;
   cursor: default;
-}
-
-.weather-temp .active:hover {
-  text-decoration: none;
 }
 
 .units {
@@ -121,9 +117,4 @@ body {
   font-weight: 600;
   position: relative;
   top: 15px;
-}
-
-#celsius-link,
-#fahrenheit-link {
-  text-decoration: none;
 }
